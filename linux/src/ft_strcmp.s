@@ -1,9 +1,9 @@
-global _ft_strcmp
+global ft_strcmp
 default rel
 
 section .text
 
-_ft_strcmp:
+ft_strcmp:
 	xor	rcx, rcx
 	xor	rdx, rdx
 	xor	r8, r8

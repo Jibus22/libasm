@@ -1,8 +1,8 @@
-global _ft_strcpy
+global ft_strcpy
 
 section .text
 
-_ft_strcpy:
+ft_strcpy:
 	mov	r10, -1
 s1:
 	inc	r10

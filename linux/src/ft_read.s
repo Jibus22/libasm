@@ -1,10 +1,10 @@
-global _ft_read
+global ft_read
 extern ___error
 default rel
 
 section .text
 
-_ft_read:
+ft_read:
 	mov	rax, 0			;read syscall linux ID
 	syscall
 	jc	error			;syscall error sets CARRY FLAG (CF) in RFLAGS register

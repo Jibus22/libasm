@@ -6,7 +6,7 @@ INCLUDE = ./includes
 SRCPATH = ./src
 OBJPATH = ./obj
 
-NASM = nasm -fmacho64
+NASM = nasm -felf64
 CLANG = clang -Wextra -Werror -Wall
 
 #SRCS
