@@ -102,7 +102,7 @@ void		readtest(char *file)
 buf);
 	close(fd);
 	fd = open(file, O_RDONLY);
-	printf(""TNAME(RET_FTRD10)"ftread=%3zd\tft_buf:%s\n", read(fd, ft_buf, 10),
+	printf(""TNAME(RET_FTRD10)"ftread=%3zd\tft_buf:%s\n", ft_read(fd, ft_buf, 10),
 ft_buf);
 	close(fd);
 //test2
@@ -112,7 +112,7 @@ ft_buf);
 buf);
 	close(fd);
 	fd = open(file, O_RDONLY);
-	printf(""TNAME(RET_FTRD42)"ftread=%3zd\tft_buf:%s\n", read(fd, ft_buf, 42),
+	printf(""TNAME(RET_FTRD42)"ftread=%3zd\tft_buf:%s\n", ft_read(fd, ft_buf, 42),
 ft_buf);
 	close(fd);
 //test3
@@ -121,7 +121,7 @@ ft_buf);
 	printf(""TNAME(RET_READ0)"read  =%3zd\tbuf   :%s\n", read(fd, buf, 0), buf);
 	close(fd);
 	fd = open(file, O_RDONLY);
-	printf(""TNAME(RET_FTRD0)"ftread=%3zd\tft_buf:%s\n", read(fd, ft_buf, 0),
+	printf(""TNAME(RET_FTRD0)"ftread=%3zd\tft_buf:%s\n", ft_read(fd, ft_buf, 0),
 ft_buf);
 	close(fd);
 //test4
@@ -133,7 +133,7 @@ read(100, buf, 42), errno, buf);
 	errno = 0;
 	fd = open(file, O_RDONLY);
 	printf(""TNAME(RET_FTRD_bad_fd)""BKSLSH"ftread=%3zd\t"ERROR"ft_buf:%s\n",
-read(100, ft_buf, 42), errno, ft_buf);
+ft_read(100, ft_buf, 42), errno, ft_buf);
 	close(fd);
 	errno = 0;
 //test5
@@ -145,7 +145,7 @@ read(fd, buf, -1), errno, buf);
 	errno = 0;
 	fd = open(file, O_RDONLY);
 	printf(""TNAME(RET_FTRD_nbytes-1)""BKSLSH"ftread=%3zd\t"ERROR"ft_buf:%s\n",
-read(fd, ft_buf, -1), errno, ft_buf);
+ft_read(fd, ft_buf, -1), errno, ft_buf);
 	close(fd);
 	errno = 0;
 //test6
@@ -157,7 +157,7 @@ read(1, NULL, 42), errno, buf);
 	errno = 0;
 	fd = open(file, O_RDONLY);
 	printf(""TNAME(RET_FTRD_nullbuf)""BKSLSH"ftread=%3zd\t"ERROR"ft_buf:%s\n",
-read(1, NULL, 42), errno, ft_buf);
+ft_read(1, NULL, 42), errno, ft_buf);
 	close(fd);
 	errno = 0;
 }
